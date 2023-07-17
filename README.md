@@ -46,11 +46,11 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- Sass preprocessor
+- Scss preprocessor
 
 ### What I learned
 
-"In this project, I had the opportunity to create a landing page using a combination of HTML, CSS, Sass, Flexbox, and Grid. One of the main skills I developed was the effective use of Sass, particularly leveraging its power mixins, nesting, variables, and parameters. By utilizing mixins, I was able to streamline my code and reuse common styles throughout the project. The nesting feature of Sass allowed me to write more organized and readable styles by nesting selectors within one another. Moreover, I grasped the concept of variables, which enabled me to define reusable values for colors, font sizes, and other properties. With the use of parameters, I could customize the behavior of my mixins based on specific needs. Overall, this project helped me gain a deeper understanding of front-end web development techniques and improved my ability to create responsive and visually appealing landing pages."
+"In this project, I had the opportunity to create a landing page using a combination of HTML, CSS, Sass, Flexbox, and Grid. One of the main skills I developed was the effective use of Sass, particularly leveraging its power mixins, nesting, variables, and parameters. By utilizing mixins, I was able to streamline my code and reuse common styles throughout the project. The nesting feature of Sass allowed me to write more organized and readable styles by nesting selectors within one another. Moreover, I grasped the concept of variables, which enabled me to define reusable values for colours, font sizes, and other properties. With the use of parameters, I could customize the behavior of my mixins based on specific needs. Overall, this project helped me better understand front-end web development techniques and improved my ability to create responsive and visually appealing landing pages."
 
 ```css
 @mixin myFlex($align-item, $flex-direction) {
@@ -86,16 +86,16 @@ Users should be able to:
   font-family: $Bai_Jamuree;
   font-weight: 400;
   color: $Grayish_Blue;
-  text-align: center;
+  text-align:centrer;
   width: 45%;
   margin-top: 1rem;
-  line-height: 1.75rem;
+  line height: 1.75rem;
 }
 ```
 
 ### Continued development
 
-"Moving forward, I am eager to further enhance my front-end development skills by fully transitioning from CSS3 to Sass. The power and flexibility that Sass provides have become evident to me during this project, and I believe that diving deeper into Sass will greatly strengthen my foundation in front-end development. By utilizing advanced features such as mixins, nesting, variables, and parameters, I aim to streamline my code even further and make it more modular and maintainable. Additionally, I plan to explore other Sass functionalities, such as partials and imports, to organize my stylesheets more efficiently. I am excited to continue learning and implementing best practices in front-end development, keeping up with the latest trends and techniques to create visually stunning and responsive websites."
+"Moving forward, I am eager to further enhance my front-end development skills by fully transitioning from CSS3 to Sass. The power and flexibility that Sass provides have become evident to me during this project, and I believe that diving deeper into Sass will greatly strengthen my foundation in front-end development. By utilizing advanced features such as mixins, nesting, variables, and parameters, I aim to further streamline my code and make it more modular and maintainable. Additionally, I plan to explore other Sass functionalities, such as partials and imports, to organize my stylesheets more efficiently. I am excited to continue learning and implementing best practices in front-end development, keeping up with the latest trends and techniques to create visually stunning and responsive websites."
 
 ### Useful resources
 
