@@ -1,0 +1,567 @@
+// importing fonts from google fonts
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+// resting browser custom css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// variable for color and fonts and fonts size
+
+// fonts size
+
+$ParaText: 1.125rem;
+
+// fonts
+
+$Bai_Jamuree: "Bai Jamjuree", sans-serif;
+
+// colors
+
+$Light_Blue: hsl(233, 100%, 69%);
+$Strong_Cyan: hsl(171, 66%, 44%);
+$Grayish_Blue: hsl(201, 11%, 66%);
+$Dark_Grayish_Blue: hsl(210, 10%, 33%);
+
+// mixin for resualbe style components
+
+@mixin myFlex($align-item, $flex-direction) {
+  display: flex;
+  justify-content: center;
+  align-items: $align-item;
+  flex-direction: $flex-direction;
+}
+
+@mixin myBtn($bg_color) {
+  font-size: $ParaText;
+  font-family: $Bai_Jamuree;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  background-color: $bg_color;
+  color: white;
+  font-weight: 800;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+@mixin sectionHeading {
+  font-size: 2rem;
+  font-family: $Bai_Jamuree;
+  font-weight: 800;
+  text-align: center;
+  color: $Dark_Grayish_Blue;
+}
+
+@mixin sectionPara {
+  font-size: $ParaText;
+  font-family: $Bai_Jamuree;
+  font-weight: 400;
+  color: $Grayish_Blue;
+  text-align: center;
+  width: 45%;
+  margin-top: 1rem;
+  line-height: 1.75rem;
+}
+
+// frontend mentor default css
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+// style for header
+
+header {
+  background: url(../images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+  @include myFlex(center, column);
+
+  //   style for main heading
+
+  h1 {
+    font-size: 2.5rem;
+    font-family: $Bai_Jamuree;
+    color: $Dark_Grayish_Blue;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: $ParaText;
+    font-family: $Bai_Jamuree;
+    color: $Grayish_Blue;
+    margin-top: 1rem;
+    width: 40%;
+    text-align: center;
+  }
+
+  .btn-container {
+    @include myFlex(center, row);
+    column-gap: 1rem;
+    margin-top: 3rem;
+
+    .btn {
+      @include myBtn($Light_Blue);
+      transition: all 0.3s ease-in-out;
+    }
+
+    :last-child {
+      @include myBtn($Strong_Cyan);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// style for hero section
+
+.hero {
+  @include myFlex(center, column);
+  h2 {
+    @include sectionHeading();
+  }
+
+  p {
+    @include sectionPara();
+  }
+
+  .hero-container {
+    @include myFlex(center, row);
+    column-gap: 3rem;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4rem;
+
+    .hero-img {
+      position: relative;
+      left: -50px;
+    }
+  }
+
+  .hero-content {
+    width: 50%;
+    @include myFlex(flex-start, column);
+    row-gap: 3rem;
+    h3 {
+      font-size: 1.5rem;
+      font-family: $Bai_Jamuree;
+      font-weight: 800;
+      color: $Dark_Grayish_Blue;
+    }
+
+    p {
+      font-size: $ParaText;
+      font-family: $Bai_Jamuree;
+      color: $Grayish_Blue;
+      width: 65%;
+      text-align: left;
+    }
+  }
+}
+
+// style for device section
+
+.device-section {
+  @include myFlex(center, column);
+  margin-top: 5rem;
+  h2 {
+    @include sectionHeading();
+  }
+
+  p {
+    @include sectionPara();
+  }
+
+  img {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 5rem;
+  }
+}
+
+// style for tools section
+
+.tools-section {
+  @include myFlex(center, column);
+  h2 {
+    @include sectionHeading();
+  }
+  p {
+    @include sectionPara();
+  }
+
+  .card-container {
+    @include myFlex(center, row);
+    justify-content: center;
+    margin-top: 3rem;
+    column-gap: 2rem;
+
+    .card {
+      @include myFlex(center, column);
+      justify-content: flex-start;
+      width: 25%;
+      height: 250px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        aspect-ratio: 9/16;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        font-family: $Bai_Jamuree;
+        font-weight: 800;
+        color: $Dark_Grayish_Blue;
+        margin-top: 3rem;
+      }
+
+      p {
+        font-size: $ParaText;
+        font-family: $Bai_Jamuree;
+        color: $Grayish_Blue;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// style for client section
+
+.client-section {
+  @include myFlex(center, row);
+  min-height: 40vh;
+
+  .client-group {
+    list-style: none;
+    @include myFlex(center, row);
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+// style for callback section
+
+.callback-section {
+  @include myFlex(center, column);
+  height: 60vh;
+  h2 {
+    @include sectionHeading();
+  }
+
+  p {
+    @include sectionPara();
+  }
+
+  .btn-container {
+    @include myFlex(center, row);
+    column-gap: 1rem;
+    margin-top: 3rem;
+
+    .btn {
+      @include myBtn($Light_Blue);
+      transition: all 0.3s ease-in-out;
+    }
+
+    :last-child {
+      @include myBtn($Strong_Cyan);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+// styling for footer section
+
+.footer-link {
+  @include myFlex(center, row);
+  justify-content: flex-start;
+  padding: 3rem 10rem;
+  background-color: hsl(0, 0%, 95%);
+
+  .nav-brand {
+    width: 50px;
+    height: 50px;
+  }
+
+  .link-group {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    row-gap: 1rem;
+    margin-left: 10rem;
+
+    li a {
+      font-size: $ParaText;
+      font-family: $Bai_Jamuree;
+      font-weight: 400;
+      text-decoration: none;
+      color: $Dark_Grayish_Blue;
+      transition: all 0.3s ease-in-out;
+    }
+
+    li a:hover {
+      color: $Strong_Cyan;
+    }
+  }
+
+  .social-link {
+    @include myFlex(center, row);
+    column-gap: 1rem;
+    margin-left: 25rem;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+// media querry for tablet screen
+
+@media screen and (max-width: 820px) {
+  // style for header
+
+  header {
+    background: url(../images/bg-header-mobile.png);
+    background-size: cover;
+    height: 60vh;
+
+    p {
+      width: 70%;
+    }
+  }
+}
+
+// media querry for mobile screen
+
+@media screen and (max-width: 820px) {
+  // style for header
+
+  header {
+    background: url(../images/bg-header-mobile.png);
+    background-size: cover;
+    height: 100vh;
+    padding: 0 2.25rem;
+
+    //   style for main heading
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    .btn-container {
+      @include myFlex(center, column);
+      row-gap: 1.5rem;
+
+      .btn {
+        width: 350px;
+        padding: 1.2rem 0;
+      }
+    }
+  }
+
+  .hero {
+    @include myFlex(center, column);
+    padding: 2.25rem;
+    h2 {
+      @include sectionHeading();
+    }
+
+    p {
+      @include sectionPara();
+      width: 100%;
+    }
+
+    .hero-container {
+      @include myFlex(center, column);
+      column-gap: 3rem;
+      justify-content: center;
+      width: 100%;
+      margin-top: 4rem;
+
+      .hero-img {
+        position: relative;
+        left: 0px;
+        width: 350px;
+      }
+    }
+
+    .hero-content {
+      padding: 2.25rem;
+      margin-top: 1rem;
+      width: 100vw;
+      @include myFlex(center, column);
+      row-gap: 3rem;
+      h3 {
+        text-align: center;
+      }
+
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  // device section responsive style
+
+  .device-section {
+    @include myFlex(center, column);
+    padding: 2.25rem;
+
+    h2 {
+      width: 100%;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    img {
+      width: 345px;
+      object-fit: cover;
+    }
+  }
+
+  // tools section responsive style
+
+  .tools-section {
+    @include myFlex(center, column);
+    padding: 2.25rem;
+    h2 {
+      @include sectionHeading();
+    }
+    p {
+      @include sectionPara();
+      width: 100%;
+    }
+
+    .card-container {
+      @include myFlex(center, column);
+      justify-content: center;
+
+      .card {
+        @include myFlex(center, column);
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+      }
+    }
+  }
+
+  // client sceiton responsive styles
+
+  .client-section {
+    @include myFlex(center, row);
+    margin-top: 3rem;
+    padding: 2.25rem;
+
+    .client-group {
+      list-style: none;
+      @include myFlex(center, column);
+      row-gap: 5rem;
+      width: 100%;
+    }
+  }
+
+  // callback sceiton responsive styles
+
+  .callback-section {
+    @include myFlex(center, column);
+    height: 100%;
+    padding: 2.25rem;
+    h2 {
+      @include sectionHeading();
+    }
+
+    p {
+      @include sectionPara();
+      width: 100%;
+    }
+
+    .btn-container {
+      @include myFlex(center, column);
+      column-gap: 1rem;
+      margin-top: 3rem;
+      row-gap: 1.5rem;
+
+      .btn {
+        @include myBtn($Light_Blue);
+        width: 340px;
+        padding: 1.2rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      :last-child {
+        @include myBtn($Strong_Cyan);
+        transition: all 0.3s ease-in-out;
+        padding: 1.2rem;
+      }
+
+      .btn:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // footer section reponsive style
+
+  .footer-link {
+    @include myFlex(center, column);
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 95%);
+
+    .nav-brand {
+      width: 50px;
+      height: 50px;
+    }
+
+    .link-group {
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 0rem;
+      row-gap: 2rem;
+      margin-left: 0rem;
+      align-items: center;
+      justify-items: center;
+      margin-top: 3rem;
+
+      li a {
+        text-align: center;
+      }
+
+      li a:hover {
+        color: $Strong_Cyan;
+      }
+    }
+
+    .social-link {
+      margin-top: 2rem;
+      @include myFlex(center, row);
+      column-gap: 2rem;
+      margin-left: 0rem;
+    }
+  }
+}
